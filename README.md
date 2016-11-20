@@ -1,5 +1,7 @@
 # markdown-previewer
+A redux app that uses FCC api to store recent and all time contributors and displays them accordingly
 
+Built for FCC data visualization certificate
 
 Setup
 =====
