@@ -1,11 +1,23 @@
+$primary-color: #4997de;
+$secondary-color: #c027ff;
+
 * {
   .header {
-    color: #2216d1;
+    color: white;
   }
 }
 
-$primary-color: rgba(255, 174, 39, 1);
-$secondary-color: rgba(222, 73, 109, 1);
+body{
+  background: $primary-color;
+  background: -moz-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, $primary-color), color-stop(100%, $secondary-color));
+  background: -webkit-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+  background: -o-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+  background: -ms-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
+  background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffae27', endColorstr='#de496d', GradientType=1);
+}
+
 #app {
   background: $primary-color;
   background: -moz-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
@@ -15,8 +27,6 @@ $secondary-color: rgba(222, 73, 109, 1);
   background: -ms-linear-gradient(-45deg, $primary-color 0%, $secondary-color 100%);
   background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffae27', endColorstr='#de496d', GradientType=1);
-  width: 100vw;
-  height: 100vh;
   a {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -38,23 +48,20 @@ $secondary-color: rgba(222, 73, 109, 1);
     color: white;
   }
 
-  .btn{
+  .btn {
     margin: 10px;
   }
 }
 
-.user-list {
+.user-table {
   img {
     height: 64px;
     width: 64px;
+    margin: 10px;
   }
-  .user{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  .user {
     width: 100%;
   }
-
-
+  color: white;
 }
 
