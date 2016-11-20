@@ -1,9 +1,28 @@
-import { combineReducers } from "redux"
 
-import sampleReducer from "./sampleReducer"
-import sampleReducer2 from "./sampleReducer2"
+export default function reducer (state ={
+    users: [],
+    fetching: false,
+    fetched: false,
+    error: null
 
-export default combineReducers({
-    sampleReducer,
-    sampleReducer2
-})
+}, action){
+
+    switch(action.type){
+        case "FETCHING_USERS": {
+            return {...state, fetching:true}
+        }
+        case "FETCHING_FAILED": {
+            return {...state, fetching:false, error: action.payload}
+        }
+        case "USERS_RECEIVED": {
+            return {
+                ...state,
+                fetching: false,
+                fetched: true,
+                users:action.payload
+            }
+        }
+    }
+
+    return state
+}

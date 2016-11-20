@@ -8,7 +8,7 @@ Requirements: you need a recent version of node and Webpack installed
 
 You can install it with `npm install -g webpack webpack-dev-server`
 
-    git clone https://github.com/jaykch/markdown-previewer.git
+    git clone https://github.com/jaykch/camper-leaderboard.git
     npm install
     
 ###Run Webpack Server
